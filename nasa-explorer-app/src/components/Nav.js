@@ -4,7 +4,7 @@ export default function Nav() {
     return(
         <div>
             <Link to="/">Home</Link>
-            <Link to="/data">Data</Link>
+            {/* <Link to="/picture-of-the-day">Picture of the Day</Link> */}
         </div>
     )
 }

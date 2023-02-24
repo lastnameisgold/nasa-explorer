@@ -3,3 +3,42 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #f8f8f8;
+}
+
+.nav-container {
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.apod-card {
+  background-color: palegoldenrod;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.apod-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.apod-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-gap: 1rem;
+}
