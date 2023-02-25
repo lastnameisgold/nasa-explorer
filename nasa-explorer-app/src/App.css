@@ -126,6 +126,40 @@ a:hover {
   padding: 5rem;
 }
 
+.card-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  height: 250px;
+  width: 250px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  overflow: hidden;
+}
+
+.scrim {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1.5rem;
+  color: white;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8 ) 85%);
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
 /* Responsive wip
 @media screen and (max-width: 668px) {
   .apod-card {

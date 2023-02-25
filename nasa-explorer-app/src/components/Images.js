@@ -6,7 +6,7 @@ export default function Images(){
     const [images, setImages] = useState([])
 
     useEffect(() => {
-        const url = `https://images-api.nasa.gov/search?q=Mars`
+        const url = `https://images-api.nasa.gov/search?q=galaxies`
 
         const getImages = async() => {
             const response = await axios.get(url)
@@ -18,16 +18,19 @@ export default function Images(){
 
     if (images) {
         return(
-            <div>
+            <div className="card-grid">
                 {images.map((image) => {
                     if(image.links) {
                         console.log(image.links)
                         return(
-                        <img src={image.links[0].href}/>
+                            <div className="card" style={{backgroundImage: `url("${image.links[0].href}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
+                                <div className="scrim">
+                                    <h4>{image.data[0].title}</h4>
+                                </div>
+                            </div>
                         )
                     }
                 })}
-                <h2>Image goes here</h2>
             </div>
         )
     } else {
