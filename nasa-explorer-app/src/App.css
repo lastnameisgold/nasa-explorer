@@ -17,6 +17,12 @@ body {
   padding: 0.5rem 2rem;
 }
 
+.apod-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .apod-card {
   background-color: palegoldenrod;
   display: grid;
@@ -24,6 +30,26 @@ body {
   grid-gap: 2rem;
   padding: 2rem;
   align-items: center;
+}
+
+.apod-label {
+  text-transform: uppercase;
+  color: rgb(112, 112, 112);
+}
+
+.apod-date-picker {
+  padding: 1rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border-style: none;
+  font-size: 1rem;
+  outline: 2px ;
+  outline-style: solid;
+  outline-color: lightgray;
+  margin: 2rem 0;
 }
 
 .apod-image {
@@ -41,4 +67,27 @@ body {
   flex-direction: column;
   justify-content: center;
   grid-gap: 1rem;
+}
+
+/* Responsive wip */
+@media screen and (max-width: 668px) {
+  .apod-card {
+    background-color: palegoldenrod;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding: 1.5rem;
+    align-items: center;
+  }
+
+  .apod-date-picker {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    border-style: none;
+  }
+
 }
