@@ -14,21 +14,20 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
 }
 
-.apod-container {
+.links-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  gap: 2rem
 }
 
 .apod-card {
+  height: fit-content;
   background-color: palegoldenrod;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-  padding: 2rem;
   align-items: center;
 }
 
@@ -54,12 +53,7 @@ body {
 
 .apod-image {
   width: 100%;
-  height: auto;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+  height: 100%;
 }
 
 .apod-content {
@@ -67,9 +61,10 @@ body {
   flex-direction: column;
   justify-content: center;
   grid-gap: 1rem;
+  padding: 5rem;
 }
 
-/* Responsive wip */
+/* Responsive wip
 @media screen and (max-width: 668px) {
   .apod-card {
     background-color: palegoldenrod;
@@ -91,3 +86,4 @@ body {
   }
 
 }
+*/

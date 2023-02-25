@@ -1,6 +1,3 @@
-// Give this file an appropriate name, do not use Data
-// Data is just for Jeremy's demo
-
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { format } from "date-fns"
@@ -9,7 +6,7 @@ export default function APOD() {
 
     // making a state to set data in
     // setting up a useEffect to control my components lifecycle
-    //  organize API links/url
+    // organize API links/url
     // make the API call
     // set our data in state and log it
     // render our data
@@ -28,19 +25,19 @@ export default function APOD() {
         getApod()
     }, [date])
 
-    const handleDateChange = (e) => {
-        setDate(e.target.value)
-    }
+    // const handleDateChange = (e) => {
+    //     setDate(e.target.value)
+    // }
 
     // Returns go INSIDE of our If Else
     // Ternaries go INSIDE of our Returns
 
     if(apod) {
         return (
-            <div className="apod-container">
-                <input className="apod-date-picker" type="date" value={date} onChange={handleDateChange}/>
                 <div className="apod-card">
-                    <img className="apod-image" src={apod.url} alt="Astronomy picture of the day"/>
+                    {/* <input className="apod-date-picker" type="date" value={date} onChange={handleDateChange}/> */}
+                    <div className="apod-image" style={{backgroundImage: `url("${apod.url}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}></div>
+                    {/* <img className="apod-image" src={apod.url} alt="Astronomy picture of the day"/> */}
                     <div className="apod-content">
                         <h5 className="apod-label">Astronomy Picture of the Day</h5>
                         <h2>{apod.title}</h2>
@@ -48,7 +45,6 @@ export default function APOD() {
                         <p><small>Copyright: {apod.copyright}</small></p>
                     </div>
                 </div>
-            </div>
         )
     } else {
         return (
