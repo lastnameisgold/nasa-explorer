@@ -5,7 +5,7 @@ export default function Nav() {
         <div className='links-container'>
             <Link to="/images">Images</Link>
             <Link to="/videos">Videos</Link>
-            <button>Dark Mode</button>
+            <button className='tonal-button'><span class="material-symbols-rounded icon-size">dark_mode</span></button>
         </div>
     )
 }

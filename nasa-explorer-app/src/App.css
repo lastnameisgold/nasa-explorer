@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: aliceblue;
 }
 
 .nav-container {
@@ -14,13 +14,50 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
+}
+
+.nav-container a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
 }
 
 .links-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 2rem
+}
+
+.tonal-button {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.icon-size {
+  font-size: 1.25rem;
 }
 
 .apod-card {

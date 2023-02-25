@@ -37,7 +37,6 @@ export default function APOD() {
                 <div className="apod-card">
                     {/* <input className="apod-date-picker" type="date" value={date} onChange={handleDateChange}/> */}
                     <div className="apod-image" style={{backgroundImage: `url("${apod.url}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}></div>
-                    {/* <img className="apod-image" src={apod.url} alt="Astronomy picture of the day"/> */}
                     <div className="apod-content">
                         <h5 className="apod-label">Astronomy Picture of the Day</h5>
                         <h2>{apod.title}</h2>
