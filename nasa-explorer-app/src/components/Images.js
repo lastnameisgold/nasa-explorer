@@ -3,23 +3,30 @@ import axios from "axios"
 
 export default function Images(){
 
-    const [image, setImage] = useState({})
+    const [images, setImages] = useState([])
 
     useEffect(() => {
         const url = `https://images-api.nasa.gov/search?q=Mars`
 
-        const getImage = async() => {
+        const getImages = async() => {
             const response = await axios.get(url)
-            console.log(response.data.collection)
-            setImage(response.data.collection)
+            console.log(response.data.collection.items)
+            setImages(response.data.collection.items)
         }
-        getImage()
+        getImages()
     }, [])
 
-    if (image) {
+    if (images) {
         return(
             <div>
-                {/* {image.items.map((item) => (<img src={item.href} alt="something"/>))}  */}
+                {images.map((image) => {
+                    if(image.links) {
+                        console.log(image.links)
+                        return(
+                        <img src={image.links[0].href}/>
+                        )
+                    }
+                })}
                 <h2>Image goes here</h2>
             </div>
         )
