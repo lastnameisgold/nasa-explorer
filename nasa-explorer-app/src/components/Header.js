@@ -5,7 +5,7 @@ export default function Header() {
     return(
         <div className="nav-container">
             <div className="logo-container">
-                <Link to="/"><h1>NASA Explorer</h1></Link>
+                <Link to="/"><h2>NASA Explorer</h2></Link>
             </div>
                 <Nav />
         </div>

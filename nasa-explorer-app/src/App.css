@@ -1,3 +1,10 @@
+@import url(../src/css/tokens.css);
+@import url(../src/css/colors.module.css);
+@import url(../src/css/typography.module.css);
+@import url(../src/css/theme.light.css) (prefers-color-scheme: light);
+@import url(../src/css/theme.dark.css) (prefers-color-scheme: dark);
+
+
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +12,11 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: var(--md-sys-color-background);
 }
 
 .nav-container {
-  background-color: pink;
+  background-color: var(--md-sys-color-surface);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +27,7 @@ body {
 .nav-container a {
   text-decoration: none;
   font-weight: 600;
-  color: black;
+  color: var(--md-sys-color-on-surface);
 }
 
 a:hover {
@@ -36,6 +43,8 @@ a:hover {
 }
 
 .tonal-button {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -46,6 +55,21 @@ a:hover {
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
+}
+
+.filled-button {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border: none;
 }
 
 .material-symbols-rounded {
@@ -62,7 +86,8 @@ a:hover {
 
 .apod-card {
   height: fit-content;
-  background-color: palegoldenrod;
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -70,7 +95,7 @@ a:hover {
 
 .apod-label {
   text-transform: uppercase;
-  color: rgb(112, 112, 112);
+  color: var(--md-sys-color-outline);
 }
 
 .apod-date-picker {
