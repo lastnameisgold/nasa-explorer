@@ -4,13 +4,6 @@ import { format } from "date-fns"
 
 export default function APOD() {
 
-    // making a state to set data in
-    // setting up a useEffect to control my components lifecycle
-    // organize API links/url
-    // make the API call
-    // set our data in state and log it
-    // render our data
-
     const [apod, setApod] = useState({})
     const [date, setDate] = useState(format(new Date(), 'yyyy-MM-dd'))
 
@@ -25,17 +18,15 @@ export default function APOD() {
         getApod()
     }, [date])
 
-    // const handleDateChange = (e) => {
-    //     setDate(e.target.value)
-    // }
-
-    // Returns go INSIDE of our If Else
-    // Ternaries go INSIDE of our Returns
+    const handleDateChange = (e) => {
+        setDate(e.target.value)
+    }
 
     if(apod) {
         return (
+            <div>
+            <input className="apod-date-picker" type="date" value={date} onChange={handleDateChange}/>
                 <div className="apod-card">
-                    {/* <input className="apod-date-picker" type="date" value={date} onChange={handleDateChange}/> */}
                     <div className="apod-image" style={{backgroundImage: `url("${apod.url}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}></div>
                     <div className="apod-content">
                         <h5 className="apod-label">Astronomy Picture of the Day</h5>
@@ -45,6 +36,7 @@ export default function APOD() {
                         <button className="filled-button">View full size photo</button>
                     </div>
                 </div>
+            </div>
         )
     } else {
         return (

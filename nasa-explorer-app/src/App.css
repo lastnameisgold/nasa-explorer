@@ -16,7 +16,7 @@ body {
 }
 
 .nav-container {
-  background-color: var(--md-sys-color-surface);
+  /* background-color: var(--md-sys-color-surface); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -107,10 +107,67 @@ a:hover {
   -o-border-radius: 2rem;
   border-style: none;
   font-size: 1rem;
-  outline: 2px ;
+  outline: 1px ;
   outline-style: solid;
-  outline-color: lightgray;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
+  /* outline-color: white; */
   margin: 2rem 0;
+}
+
+.image-container {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--md-sys-color-surface-variant);
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  grid-gap: 0.5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.search-input {
+  height: 2rem;
+  width: 40vw;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.apod-date-picker ::-webkit-calendar-picker-indicator {
+  color: white;
+  background-color: var(--md-sys-color-surface-tint);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.main-search-container {
+  /* position: absolute;
+  top: 0; */
 }
 
 .apod-image {
@@ -130,35 +187,47 @@ a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
   padding: 2rem;
 }
 
 .card {
-  height: 250px;
   width: 250px;
+  height: auto;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.scrim {
+.apod-image {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 1.5rem;
-  color: white;
-  border-radius: inherit;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8 ) 85%);
-  -webkit-border-radius: inherit;
-  -moz-border-radius: inherit;
-  -ms-border-radius: inherit;
-  -o-border-radius: inherit;
 }
+
+.search-image {
+  width: 250px;
+  height: 250px;
+}
+
+.apod-title {
+  height: 100%;
+  width: 100%;
+  color: var(--md-sys-color-on-surface-variant);
+  background-color: var(--md-sys-color-surface-variant);
+  padding: 1rem;
+}
+
+.footer-container {
+  height: 30vh;
+  width: 100%;
+  background-color: pink;
+}
+
 
 /* Responsive wip
 @media screen and (max-width: 668px) {
