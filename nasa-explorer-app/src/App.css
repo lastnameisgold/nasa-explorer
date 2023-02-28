@@ -4,17 +4,19 @@
 @import url(../src/css/theme.light.css) (prefers-color-scheme: light);
 @import url(../src/css/theme.dark.css) (prefers-color-scheme: dark);
 
-
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* CSS Reset */
 
 body {
   background-color: var(--md-sys-color-background);
 }
 
+/* Navbar */
 .nav-container {
   /* background-color: var(--md-sys-color-surface); */
   display: flex;
@@ -41,7 +43,9 @@ a:hover {
   align-items: center;
   gap: 2rem
 }
+/* Navbar */
 
+/* Buttons */
 .tonal-button {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
@@ -71,7 +75,9 @@ a:hover {
   -o-border-radius: 2rem;
   border: none;
 }
+/* Buttons */
 
+/* Material Symbol */
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 1,
@@ -83,7 +89,35 @@ a:hover {
 .icon-size {
   font-size: 1.25rem;
 }
+/* Material Symbol */
 
+/* Date Picker */
+.apod-date-picker {
+  width: 25vw;
+  padding: 1rem;
+  border-style: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.apod-date-picker ::-webkit-calendar-picker-indicator {
+  color: white;
+  background-color: var(--md-sys-color-surface-tint);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+/* Date Picker */
+
+
+/* Astronomy Picture of the Day Card */
 .apod-card {
   height: fit-content;
   background-color: var(--md-sys-color-surface-variant);
@@ -93,37 +127,37 @@ a:hover {
   align-items: center;
 }
 
+.apod-image {
+  width: 100%;
+  height: 100%;
+}
+
 .apod-label {
   text-transform: uppercase;
   color: var(--md-sys-color-outline);
 }
 
-.apod-date-picker {
-  padding: 1rem;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-  -o-border-radius: 2rem;
-  border-style: none;
-  font-size: 1rem;
-  outline: 1px ;
-  outline-style: solid;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.25);
-  /* outline-color: white; */
-  margin: 2rem 0;
+.apod-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-gap: 1rem;
+  padding: 5rem;
 }
+/* Astronomy Picture of the Day Card */
 
+
+/* Container with background image */
 .image-container {
   height: 30vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--md-sys-color-surface-variant);
+  background-color: pink;
 }
 
+/* Container for the search input */
 .search-bar-container {
   display: flex;
   align-items: center;
@@ -137,6 +171,7 @@ a:hover {
   -o-border-radius: 0.5rem;
 }
 
+/* Search Input */
 .search-input {
   height: 2rem;
   width: 40vw;
@@ -153,35 +188,7 @@ a:hover {
 .search-input:focus {
   outline: none;
 }
-
-.apod-date-picker ::-webkit-calendar-picker-indicator {
-  color: white;
-  background-color: var(--md-sys-color-surface-tint);
-  padding: 0.5rem;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-
-.main-search-container {
-  /* position: absolute;
-  top: 0; */
-}
-
-.apod-image {
-  width: 100%;
-  height: 100%;
-}
-
-.apod-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  grid-gap: 1rem;
-  padding: 5rem;
-}
+/* Search Input */
 
 .card-grid {
   display: flex;
@@ -204,11 +211,6 @@ a:hover {
   padding: 0;
 }
 
-.apod-image {
-  height: 100%;
-  width: 100%;
-}
-
 .search-image {
   width: 250px;
   height: 250px;
@@ -222,9 +224,13 @@ a:hover {
   padding: 1rem;
 }
 
+/* Footer */
 .footer-container {
   height: 30vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: pink;
 }
 

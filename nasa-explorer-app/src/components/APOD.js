@@ -25,7 +25,9 @@ export default function APOD() {
     if(apod) {
         return (
             <div>
-            <input className="apod-date-picker" type="date" value={date} onChange={handleDateChange}/>
+                <div className="image-container">
+                    <input className="apod-date-picker" type="date" value={date} onChange={handleDateChange}/>
+                </div>
                 <div className="apod-card">
                     <div className="apod-image" style={{backgroundImage: `url("${apod.url}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}></div>
                     <div className="apod-content">
