@@ -5,13 +5,11 @@ import { SEARCH_URL } from "../globals"
 export default function Images(){
 
     const [images, setImages] = useState([])
-
-    // The Images page shows a search result of galaxies by default
-    // The user should be able to type a query in the search input to change the content
+    const [search, setSearch] = useState('galaxies')
 
     // Using useEffect to get images from API
     useEffect(() => {
-        const url = `${SEARCH_URL}galaxies`
+        const url = `${SEARCH_URL}${search}`
 
         const getImages = async() => {
             const response = await axios.get(url)
@@ -20,16 +18,24 @@ export default function Images(){
         }
 
         getImages()
-    }, [])
+    }, [search])
+
+    // Handles the user query
+    function handleChange(e) {
+        e.preventDefault()
+        setSearch(e.target.value)
+    }
 
     // Mapping over images array here
     if (images) {
         return(
             <div className="main-search-container">
                 <div className="image-container">
-                    <div className="search-bar-container">
-                        <span class="material-symbols-rounded">search</span>
-                        <input type="text" className="search-input" placeholder="Search for images"/>
+                    <div className="background-scrim">
+                        <div className="search-bar-container">
+                            <span class="material-symbols-rounded">search</span>
+                            <input type="text" className="search-input" placeholder="Search for images" onChange={handleChange}/>
+                        </div>
                     </div>
                 </div>
                 <div className="card-grid">
