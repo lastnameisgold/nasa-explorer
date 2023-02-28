@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
+import { SEARCH_URL } from "../globals"
 
 export default function Videos(){
 
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
-        const url = `https://images-api.nasa.gov/search?q=galaxies&media_type=video`
+        const url = `${SEARCH_URL}galaxies&media_type=video`
 
         const getVideos = async() => {
             const response = await axios.get(url)

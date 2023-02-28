@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { format } from "date-fns"
+import { APOD_URL } from "../globals"
 
 export default function APOD() {
 
@@ -8,7 +9,7 @@ export default function APOD() {
     const [date, setDate] = useState(format(new Date(), 'yyyy-MM-dd'))
 
     useEffect(() => {
-        const url = `https://api.nasa.gov/planetary/apod?api_key=2XkAKyvL0yEM9tLQOx1ZzVSjFV93EO02r69p0f3Y${date ? `&date=${date}` : ''}`
+        const url = `${APOD_URL}${date ? `&date=${date}` : ''}`
 
         const getApod = async() => {
             const response = await axios.get(url)

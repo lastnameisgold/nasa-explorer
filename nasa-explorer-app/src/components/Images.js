@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
+import { SEARCH_URL } from "../globals"
 
 export default function Images(){
 
@@ -10,7 +11,7 @@ export default function Images(){
 
     // Using useEffect to get images from API
     useEffect(() => {
-        const url = `https://images-api.nasa.gov/search?q=galaxies`
+        const url = `${SEARCH_URL}galaxies`
 
         const getImages = async() => {
             const response = await axios.get(url)
