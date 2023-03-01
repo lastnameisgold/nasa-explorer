@@ -17,7 +17,6 @@ export default function Images(){
             // console.log(response.data.collection.items)
             setImages(response.data.collection.items)
         }
-
         getImages()
     }, [search])
 
