@@ -32,9 +32,16 @@ body {
   color: var(--md-sys-color-on-surface);
 }
 
-a:hover {
+.links-container a:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  grid-gap: 0.5rem;
 }
 
 .links-container {
