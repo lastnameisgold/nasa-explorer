@@ -185,7 +185,7 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.40);
 }
 
 /* Container for the search input */
@@ -235,6 +235,37 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+  -ms-transition: ease-in-out 300ms;
+  -o-transition: ease-in-out 300ms;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+  -ms-transition: ease-in-out 300ms;
+  -o-transition: ease-in-out 300ms;
+}
+
+.card:active {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+  -ms-transition: ease-in-out 300ms;
+  -o-transition: ease-in-out 300ms;
 }
 
 .search-image {
