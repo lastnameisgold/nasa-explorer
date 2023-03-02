@@ -12,6 +12,11 @@
 }
 /* CSS Reset */
 
+.App {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-color: var(--md-sys-color-background);
 }
@@ -24,6 +29,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 2rem;
+}
+
+.nasa-logo {
+  height: 4rem;
+  width: auto;
 }
 
 .nav-container a {
@@ -41,7 +51,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: left;
-  grid-gap: 0.5rem;
+  grid-gap: 0.25rem;
 }
 
 .links-container {
@@ -66,6 +76,10 @@ body {
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
+}
+
+.tonal-button:hover {
+  cursor: pointer;
 }
 
 .filled-button {
@@ -142,6 +156,8 @@ body {
 /* Astronomy Picture of the Day Card */
 .apod-card {
   height: fit-content;
+  padding: 5rem;
+  gap: 5rem;
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-on-surface-variant);
   display: grid;
@@ -152,6 +168,37 @@ body {
 .apod-image {
   width: 100%;
   height: 100%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+  -ms-transition: ease-in-out 300ms;
+  -o-transition: ease-in-out 300ms;
+}
+
+.apod-image:hover {
+  cursor: zoom-in;
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.apod-image:active {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 300ms;
+  -moz-transition: ease-in-out 300ms;
+  -ms-transition: ease-in-out 300ms;
+  -o-transition: ease-in-out 300ms;
 }
 
 .apod-label {
@@ -164,7 +211,6 @@ body {
   flex-direction: column;
   justify-content: center;
   grid-gap: 1rem;
-  padding: 5rem;
 }
 /* Astronomy Picture of the Day Card */
 
@@ -174,6 +220,7 @@ body {
   height: 35vh;
   width: 100%;
   background-image: url("https://images.unsplash.com/photo-1543719621-92ebcae62483?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2779&q=80");
+  background-color: pink;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -193,7 +240,10 @@ body {
   display: flex;
   align-items: center;
   grid-gap: 0.5rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.50);
+  color: black;
+  border: solid 1px var(--md-sys-color-outline);
+  backdrop-filter: blur(0.25rem);
   padding: 1rem;
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
@@ -207,8 +257,13 @@ body {
   height: 2rem;
   width: 40vw;
   font-size: 1.25rem;
+  color: black;
   background-color: transparent;
   border: none;
+}
+
+.search-input::placeholder {
+  color: rgb(68, 68, 68);
 }
 
 .search-input:focus {
@@ -298,13 +353,14 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
 
 .details-text-content-container {
+  max-width: 50vw;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -336,10 +392,13 @@ body {
 .footer-container {
   height: 30vh;
   width: 100%;
+  padding: 2rem;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
-  background-color: pink;
+  flex-direction: column;
+  color: var(--md-sys-color-on-background);
+  background-color: var(--md-sys-color-background);
 }
 
 

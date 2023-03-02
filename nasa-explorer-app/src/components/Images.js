@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-import { SEARCH_URL } from "../globals"
+import { SEARCH_URL, UNSPLASH_URL } from "../globals"
 import { useNavigate } from "react-router-dom"
 
 export default function Images(){
 
     const [images, setImages] = useState([])
     const [search, setSearch] = useState('galaxies')
+    // const [unsplashImage, setUnsplashImage] = useState('')
 
-    // Using useEffect to get images from API
+    // Using useEffect to get images from NASA API
     useEffect(() => {
         const url = `${SEARCH_URL}${search}`
 
@@ -19,6 +20,20 @@ export default function Images(){
         }
         getImages()
     }, [search])
+
+    // Using useEffect to get images from Unsplash API
+    /*
+    useEffect(() => {
+        const url = `${UNSPLASH_URL}`
+
+        const getUnsplashImage = async() => {
+            const response = await axios.get(url)
+            console.log(response.data)
+            setUnsplashImage(response.data)
+        }
+        getUnsplashImage()
+    }, [])
+    */
 
     // Handles the user query
     function handleChange(e) {
