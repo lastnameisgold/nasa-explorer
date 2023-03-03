@@ -35,7 +35,7 @@ export default function Videos(){
     if (videos) {
         return(
             <div>
-                <div className="image-container">
+                <div className="image-container" style={{backgroundImage: `url("https://cdn.britannica.com/61/234061-050-6D985ED2/Carina-Nebula-Cosmic-Cliffs-NGC-3324-James-Webb-Space-Telescope-NIRCam.jpg")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
                     <div className="background-scrim">
                         <div className="search-bar-container">
                             <span class="material-symbols-rounded">search</span>

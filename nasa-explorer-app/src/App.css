@@ -153,7 +153,7 @@ body {
 
 /* Astronomy Picture of the Day Card */
 .apod-card {
-  height: 60vh;
+  height: fit-content;
   padding: 8rem 6rem;
   gap: 4rem;
   background-color: var(--md-sys-color-surface-variant);
