@@ -14,15 +14,17 @@ export default function ImageDetails() {
         setImage(selectedImage)
     },[images, index])
 
-    return image ? (
+    const fullSizeImage = image.data ? `http://images-assets.nasa.gov/image/${image.data[0].nasa_id}/${image.data[0].nasa_id}~orig.jpg` : null
+
+    return image && fullSizeImage ? (
         <div className="details-container">
             <Link className="back-button" to="/images"><span class="material-symbols-rounded icon-size">arrow_back</span>Return to Images</Link>
             <div className="details-content-container">
-                <img src={image.links[0].href} alt={image.data[0].title}/>
                 <div className="details-text-content-container">
                     <h1>{image.data[0].title}</h1>
                     <p>{image.data[0].description}</p>
                 </div>
+                <img src={fullSizeImage} alt={image.data[0].title}/>
             </div>
         </div>
     ) : <h2>Image not found</h2>

@@ -1,6 +1,6 @@
 export default function Footer() {
     return(
-        <div className="footer-container">
+        <div className="footer-content-container">
             <h3>About this app</h3>
             <p>
                 NASA Explorer is a ReactJS app built by Fernando Dorado using NASA's APIs.

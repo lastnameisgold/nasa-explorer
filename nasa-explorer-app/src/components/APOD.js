@@ -38,7 +38,6 @@ export default function APOD() {
                         <h2>{apod.title}</h2>
                         <p>{apod.explanation}</p>
                         <p><small>Copyright: {apod.copyright}</small></p>
-                        {/* <button className="filled-button">View full size photo</button> */}
                     </div>
                 </div>
             </div>

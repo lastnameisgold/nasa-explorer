@@ -11,8 +11,6 @@ function App() {
       </div>
       <div className='main-container'>
         <Main />
-      </div>
-      <div className='footer-container'>
         <Footer />
       </div>
     </div>
