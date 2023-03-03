@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 export default function Videos(){
 
     const [videos, setVideos] = useState([])
-    const [search, setSearch] = useState('earth day')
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         const url = `${SEARCH_URL}${search}&media_type=video`
