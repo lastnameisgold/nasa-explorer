@@ -27,5 +27,5 @@ I created a couple of high-fidelity mockups in Figma to have an idea of the styl
 ![Material Theme](https://i.imgur.com/kaplh3h.png)
 
 # Published Project
-The NASA Explorer app is available to view on [nasa-explorer.netlify.app](https://nasa-explorer.netlify.app/)
+The NASA Explorer app is available to view on [nasa-explorer-app.netlify.app](https://nasa-explorer-app.netlify.app/)
 
