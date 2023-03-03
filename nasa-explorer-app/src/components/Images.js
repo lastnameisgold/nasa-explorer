@@ -15,7 +15,6 @@ export default function Images(){
 
         const getImages = async() => {
             const response = await axios.get(url)
-            // console.log(response.data.collection.items)
             setImages(response.data.collection.items)
         }
         getImages()

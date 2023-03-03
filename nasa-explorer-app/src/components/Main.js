@@ -1,6 +1,5 @@
 import { Routes, Route  } from "react-router-dom"
 import Home from "./Home"
-import APODDetails from "./APODDetails"
 import Images from "./Images"
 import ImageDetails from "./ImageDetails"
 import Videos from "./Videos"
@@ -11,7 +10,6 @@ export default function Main() {
         <div className="main">
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/:index" element={<APODDetails />}/>
 
                 <Route path="/images" element={<Images />}/>
                 <Route path="/images/:index" element={<ImageDetails />}/>

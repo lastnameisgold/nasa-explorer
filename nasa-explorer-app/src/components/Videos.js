@@ -6,14 +6,13 @@ import { useNavigate } from "react-router-dom"
 export default function Videos(){
 
     const [videos, setVideos] = useState([])
-    const [search, setSearch] = useState('galaxies')
+    const [search, setSearch] = useState('earth day')
 
     useEffect(() => {
         const url = `${SEARCH_URL}${search}&media_type=video`
 
         const getVideos = async() => {
             const response = await axios.get(url)
-            // console.log(response.data.collection.items)
             setVideos(response.data.collection.items)
         }
         getVideos()

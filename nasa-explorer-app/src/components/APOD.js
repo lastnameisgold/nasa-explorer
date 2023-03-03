@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import { format } from "date-fns"
 import { APOD_URL } from "../globals"
-import { useNavigate } from "react-router-dom"
 
 export default function APOD() {
 
@@ -14,13 +13,13 @@ export default function APOD() {
 
         const getApod = async() => {
             const response = await axios.get(url)
-            console.log(response.data)
             setApod(response.data)
         }
         getApod()
     }, [date])
 
     const handleDateChange = (e) => {
+        e.preventDefault()
         setDate(e.target.value)
     }
 
@@ -33,7 +32,7 @@ export default function APOD() {
                     </div>
                 </div>
                 <div className="apod-card">
-                    <div className="apod-image" style={{backgroundImage: `url("${apod.url}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}></div>
+                    <div className="apod-image" style={{backgroundImage: `url("${apod.url}")`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}} onClick={() => {window.open(`${apod.hdurl}`,'_self')}}></div>
                     <div className="apod-content">
                         <h5 className="apod-label">Astronomy Picture of the Day</h5>
                         <h2>{apod.title}</h2>
